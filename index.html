@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title> Login </title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div> 
+      <h1 style="float: none;">Todo-list</h1>
+    </div>
+    <div id="first">
+        <form id="loginForm">
+            <input id="email" type="text" placeholder="Email" name="email" pattern="^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$" required>
+            <input id="password" type="password" placeholder="password" name="password" required>  
+            <button type="submit">Sign In</button>
+        </form>
+        <h2 id="wrong" style="display: none;">Wrong email or password</h2>
+    </div>
+    <div id="second">
+        <button onclick="showForm()">SignUp</button>
+    </div>
+    <div style="display: none;" id="showForm">
+      <form>
+        <label >Name : </label>
+        <input type="text" id="sname" pattern="^[A-Za-zÀ-ÿ ,.'-]+$" required><br>
+        <label >Email : </label>
+        <input type="text" id="semail" pattern="^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$" required><br>
+        <label >Password : </label>
+        <input type="password" id="spassword" pattern=".{8,}" required><br>
+        <button id="signUp">SignUp</button>
+      </form>
+    </div>
+    <div style="display: none;" id="error">
+      <h3> Error signing up</h3>
+    </div>
+  </body>
+  <script type="text/javascript" src="./scripts/main.js"></script>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title> Home </title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="	https://unpkg.com/mongoose@6.1.5/dist/browser.umd.js"></script>
+  </head>
+  <body>
+    <div>
+        <h1 style="float: none;">Todo-list</h1>
+    </div>
+    <div>
+        <a style="float: right;" href="../index.html" onclick="logout();"><h3>Logout</h3></a>
+    </div>
+    <div>
+        <table>
+            <tr>
+                <th>Serial No.</th>
+                <th>Description</th>
+                <th>Time</th>
+                <th>Actions</th>
+            </tr>
+            <tbody id="todo"></tbody>
+        </table>
+    </div>
+    <div style="align-items: center;">
+        <button style="display: block;" id="addTodo">Add to List</button>
+    </div>
+    <div id="view" style="display: none;">
+        <label for="">Description : </label>
+        <input id="des" type="text"><br>
+        <label for="">Time : </label>
+        <input id="hr" type="text" placeholder="HH" pattern="([0-1]?\d|2[0-3])" required>
+        <input id="mn" type="text" placeholder="MM" pattern="([0-5]?\d)" required>
+        <!-- <label>AM</label>
+        <input id="AM" type="radio" name="DN" value="AM" required>
+        <label>PM</label>
+        <input id="PM" type="radio" name="DN" value="PM" required><br> -->
+        <input type="submit" id="add" value="Add"> 
+    </div>
+    <div id="update" style="display: none;">
+        <label for="">Description : </label>
+        <input id="des2" type="text"><br>
+        <label for="">Time : </label>
+        <input id="hr2" type="number" min="0" max="12" placeholder="HH" pattern="([0-1]?\d|2[0-3])" required>
+        <input id="mn2" type="number" min="0" max="60" placeholder="MM" pattern="([0-5]?\d)" required>
+        <!-- <label>AM</label>
+        <input id="AM2" type="radio" name="DN2" value="AM">
+        <label>PM</label>
+        <input id="PM2" type="radio" name="DN2" value="PM"><br> -->
+        <button id="add2" value="Add">Update</button>
+    </div>
+  </body>
+  <script type="text/javascript" src="../scripts/home.js"></script>
+</html>
